@@ -2,12 +2,12 @@
 version: "3"
 services:
  devopsdb:
-   image: manohar805/manu:appimage
+   image: manohar805/manu:dbimage
    ports:
      - "3306:3306"
 
  application:
-   image: manohar805/manu:dbimage
+   image: manohar805/manu:appimage
    ports:
      - "1234:8080"
    depends_on:
